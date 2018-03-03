@@ -25,10 +25,6 @@ class Node:
 	def get_coords(self):
 		return self.coords
 	
-	# def get_geo(self):
-		# return rh.Point3d(self.get_coords())
-		# return self.get_coords()
-	
 	def get_dist(self, p):
 		p2 = self.get_coords()
 		p1 = p.get_coords()
@@ -97,9 +93,6 @@ class Edge:
 	
 	def get_traversal(self):
 		return self.traversals
-	
-	# def get_geo(self):
-		# return rh.Line(self.nodes[0].get_geo(), self.nodes[1].get_geo())
 
 class Graph:
 	def __init__(self):
@@ -156,8 +149,6 @@ class Graph:
 
 	def add_edge(self, line, err, cost=None):
 		edge_id = len(self.get_edges())
-		
-		# l = line.ToNurbsCurve()
 		
 		nodes = []
 		for i, p in enumerate(line):
@@ -311,6 +302,5 @@ def graph_from_lines_test():
 			print "[", str(i), "] path found -->", [n.get_id() for n in path_nodes]
 		else:
 			print "[", i, "] no path found"
-
 
 # graph_from_lines_test()
