@@ -17,4 +17,4 @@ Available parameters can be found in the `if __name__ == "__main__":` code block
 
 *for best results with the multiply and darken blending modes, images should have a white background
 
-![index](index.png)
+![bridge](bridge.png)
